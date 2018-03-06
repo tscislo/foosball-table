@@ -1,6 +1,6 @@
 <foosball-header [title]="'New Game'">
     <button mat-raised-button [routerLink]="['/players']" class="cancel-btn">Cancel</button>
-    <button mat-raised-button color="accent" [routerLink]="['/new-game']" [disabled]="players && !isGameValid()">Start!</button>
+    <button mat-raised-button color="accent" (click)="start()" [disabled]="players && !isGameValid()">Start!</button>
 </foosball-header>
 <div class="container-fluid content-spacer">
     <div class="row">

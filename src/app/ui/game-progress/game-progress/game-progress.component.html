@@ -1,0 +1,65 @@
+<foosball-header [title]="'Game progress'">
+    <button mat-raised-button color="accent" (click)="save()" [disabled]="">Save</button>
+</foosball-header>
+<div class="container-fluid content-spacer">
+    <div class="row">
+        <div class="col-12 player-card-container team-container">
+            <mat-card class="player-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        <div class="team-name">Team A</div>
+                    </mat-card-title>
+                    <mat-card-title>
+                        <mat-slide-toggle>Won?</mat-slide-toggle>
+                    </mat-card-title>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 player-card-container" *ngFor="let player of gameService.teamA">
+            <mat-card class="player-card">
+                <mat-card-header>
+                    <mat-card-title>{{ player.name }}</mat-card-title>
+                    <mat-card-subtitle>Level: {{ player.level }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="{{ player.photo }}">
+                <form>
+                    <mat-form-field>
+                        <input matInput placeholder="Goals scored">
+                    </mat-form-field>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 player-card-container">
+            <mat-card class="player-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        <div class="team-name">Team B</div>
+                    </mat-card-title>
+                    <mat-card-title>
+                        <mat-slide-toggle>Won?</mat-slide-toggle>
+                    </mat-card-title>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 player-card-container" *ngFor="let player of gameService.teamB">
+            <mat-card class="player-card">
+                <mat-card-header>
+                    <mat-card-title>{{ player.name }}</mat-card-title>
+                    <mat-card-subtitle>Level: {{ player.level }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="{{ player.photo }}">
+                <form>
+                    <mat-form-field>
+                        <input matInput placeholder="Goals scored">
+                    </mat-form-field>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

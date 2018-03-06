@@ -2,6 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
 import {ApiService} from "./api.service";
+import {GameService} from "./game.service";
+import {NewGameGuard} from "./newGame.guard";
 
 @NgModule({
     imports: [
@@ -10,7 +12,9 @@ import {ApiService} from "./api.service";
     ],
     declarations: [],
     providers: [
-        ApiService
+        ApiService,
+        GameService,
+        NewGameGuard
     ]
 })
 export class CoreModule {

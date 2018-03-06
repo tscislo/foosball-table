@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {NewGameGuard} from "./core/newGame.guard";
 
 const routes: Routes = [
     {
@@ -13,6 +14,11 @@ const routes: Routes = [
     {
         path: 'new-game',
         loadChildren: './ui/new-game/new-game.module#NewGameModule'
+    },
+    {
+        path: 'game-progress',
+        loadChildren: './ui/game-progress/game-progress.module#GameProgressModule',
+        canActivate: [NewGameGuard]
     },
     {
         path: '**',

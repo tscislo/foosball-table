@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {
-    MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatIconModule,
-    MatSelectModule
+    MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule,
+    MatSelectModule, MatSliderModule, MatSlideToggleModule
 } from "@angular/material";
 import { HeaderComponent } from './header/header.component';
 
@@ -19,7 +19,9 @@ const exportableComponents = [
         MatCardModule,
         MatButtonModule,
         MatSelectModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatInputModule,
+        MatSlideToggleModule
     ],
     declarations: exportableComponents,
     exports: [
@@ -27,6 +29,8 @@ const exportableComponents = [
         MatButtonModule,
         MatSelectModule,
         MatFormFieldModule,
+        MatInputModule,
+        MatSlideToggleModule,
         ...exportableComponents
     ]
 })

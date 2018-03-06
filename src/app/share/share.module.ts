@@ -1,7 +1,10 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule, MatCardModule, MatGridListModule, MatIconModule} from "@angular/material";
+import {
+    MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatIconModule,
+    MatSelectModule
+} from "@angular/material";
 import { HeaderComponent } from './header/header.component';
 
 const exportableComponents = [
@@ -15,13 +18,15 @@ const exportableComponents = [
         MatIconModule,
         MatCardModule,
         MatButtonModule,
-        MatGridListModule
+        MatSelectModule,
+        MatFormFieldModule
     ],
     declarations: exportableComponents,
     exports: [
         MatCardModule,
         MatButtonModule,
-        MatGridListModule,
+        MatSelectModule,
+        MatFormFieldModule,
         ...exportableComponents
     ]
 })

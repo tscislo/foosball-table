@@ -8,7 +8,7 @@
             "goalsScored": "12",
             "gamesPlayed": "23",
             "email": "skoniecpolski@ecovadis.com",
-            "photo": "assets/images/sk.PNG"
+            "photo": "assets/images/sk.png"
         },
         {
             "id": 2,
@@ -68,7 +68,7 @@
             "goalsScored": "",
             "gamesPlayed": "5",
             "email": "gadil@ecovadis.com",
-            "photo": ""
+          "photo": "assets/images/jc.jpg"
         }        
     ]
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../../../core/api.service";
+import {Player} from "../../../core/interfaces/player.interface";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'foosball-players',
@@ -8,7 +10,7 @@ import {ApiService} from "../../../core/api.service";
 })
 export class PlayersComponent implements OnInit {
 
-  public players;
+  public players: Observable<Player[]>;
 
   constructor(private apiService: ApiService) { }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ApiService} from "../../../core/api.service";
+import {Player} from "../../../core/interfaces/player.interface";
 
 @Component({
   selector: 'foosball-player-details',
@@ -9,7 +10,7 @@ import {ApiService} from "../../../core/api.service";
 })
 export class PlayerDetailsComponent implements OnInit {
 
-  public player;
+  public player: Player;
 
   constructor(private activatedRoute: ActivatedRoute,
               private apiService: ApiService

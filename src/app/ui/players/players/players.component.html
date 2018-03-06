@@ -1,5 +1,7 @@
-<foosball-header [title]="'Players'"></foosball-header>
-<div class="container-fluid">
+<foosball-header [title]="'Players'">
+    <button mat-raised-button color="accent" [routerLink]="['/new-game']">New game</button>
+</foosball-header>
+<div class="container-fluid content-spacer">
     <div class="row">
         <div class="col-12 col-sm-6 col-md-3 player-card-container" *ngFor="let player of players | async" [routerLink]="['/player-details', player.id]">
             <mat-card class="player-card">

@@ -11,6 +11,10 @@ const routes: Routes = [
         loadChildren: './ui/player-details/player-details.module#PlayerDetailsModule'
     },
     {
+        path: 'new-game',
+        loadChildren: './ui/new-game/new-game.module#NewGameModule'
+    },
+    {
         path: '**',
         redirectTo: 'players'
     }

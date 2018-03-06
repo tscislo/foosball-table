@@ -1,5 +1,7 @@
-<foosball-header [title]="'Player Details'"></foosball-header>
-<div class="container-fluid">
+<foosball-header [title]="'Player Details'">
+    <button mat-raised-button [routerLink]="['/players']" >Back</button>
+</foosball-header>
+<div class="container-fluid content-spacer">
     <div class="row">
         <div class="col-12">
             <mat-card class="player-card" *ngIf="player">
@@ -13,6 +15,7 @@
                             <mat-card-subtitle>Level: {{ player.level }}</mat-card-subtitle>
                             <mat-card-subtitle>Games Played: {{ player.gamesPlayed }}</mat-card-subtitle>
                             <mat-card-subtitle>Goals Scored: {{ player.goalsScored }}</mat-card-subtitle>
+                            <mat-card-subtitle>Email: {{ player.email }}</mat-card-subtitle>
                         </mat-card-header>
                     </div>
                 </div>

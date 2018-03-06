@@ -1,6 +1,7 @@
 {
     "players": [
         {
+            "id": 1,
             "name": "Stanislaw Koniecpolski",
             "level": "Beginner",
             "victories": "8",
@@ -10,6 +11,7 @@
             "photo": "assets/images/sk.PNG"
         },
         {
+            "id": 2,
             "name": "Sultan Mehmed",
             "level": "Advanced",
             "victories": "18",
@@ -19,6 +21,7 @@
             "photo": "assets/images/sm.jpg"
         },
         {
+            "id": 3,
             "name": "Petro Doroshenko",
             "level": "Expert",
             "victories": "44",
@@ -28,6 +31,7 @@
             "photo": "assets/images/pd.jpg"
         },
         {
+            "id": 4,
             "name": "Jan Sobieski",
             "level": "expert",
             "victories": "52",
@@ -37,6 +41,7 @@
             "photo": "assets/images/js.jpg"
         },
         {
+            "id": 5,
             "name": "Kara Mustafa Pasha",
             "level": "Advanced",
             "victories": "",
@@ -46,6 +51,7 @@
             "photo": "assets/images/kmp.jpg"
         },
         {
+            "id": 6,
             "name": "Jan Karol Chodkiewicz",
             "level": "advanced",
             "victories": "9",
@@ -55,6 +61,7 @@
             "photo": "assets/images/jc.jpg"
         },
         {
+            "id": 7,
             "name": "Adil Giray",
             "level": "Beginner",
             "victories": "2",

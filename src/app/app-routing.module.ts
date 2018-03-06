@@ -7,6 +7,10 @@ const routes: Routes = [
         loadChildren: './ui/players/players.module#PlayersModule'
     },
     {
+        path: 'player-details',
+        loadChildren: './ui/player-details/player-details.module#PlayerDetailsModule'
+    },
+    {
         path: '**',
         redirectTo: 'players'
     }

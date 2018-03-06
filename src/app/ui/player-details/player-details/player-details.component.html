@@ -1,0 +1,22 @@
+<foosball-header [title]="'Player Details'"></foosball-header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <mat-card class="player-card" *ngIf="player">
+                <div class="row">
+                    <div class="col-4 player-photo" *ngIf="player.photo">
+                        <img mat-card-image src="{{ player.photo }}">
+                    </div>
+                    <div class="player-details" [ngClass]="{'col-8' : player.photo, 'col-12': !player.photo}">
+                        <mat-card-header>
+                            <mat-card-title>{{ player.name }}</mat-card-title>
+                            <mat-card-subtitle>Level: {{ player.level }}</mat-card-subtitle>
+                            <mat-card-subtitle>Games Played: {{ player.gamesPlayed }}</mat-card-subtitle>
+                            <mat-card-subtitle>Goals Scored: {{ player.goalsScored }}</mat-card-subtitle>
+                        </mat-card-header>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

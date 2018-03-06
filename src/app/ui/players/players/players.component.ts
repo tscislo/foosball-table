@@ -13,9 +13,7 @@ export class PlayersComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getPlayers().subscribe((players:any) => {
-        this.players = players.players;
-    })
+      this.players = this.apiService.getPlayers();
   }
 
 }

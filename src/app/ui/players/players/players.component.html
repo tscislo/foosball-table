@@ -1,11 +1,11 @@
 <foosball-header [title]="'Players'"></foosball-header>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-3 player-card-container" *ngFor="let player of players">
+        <div class="col-12 col-sm-6 col-md-3 player-card-container" *ngFor="let player of players | async" [routerLink]="['/player-details', player.id]">
             <mat-card class="player-card">
                 <mat-card-header>
                     <mat-card-title>{{ player.name }}</mat-card-title>
-                    <mat-card-subtitle>{{ player.level }}</mat-card-subtitle>
+                    <mat-card-subtitle>Level: {{ player.level }}</mat-card-subtitle>
                 </mat-card-header>
                 <img mat-card-image src="{{ player.photo }}">
             </mat-card>

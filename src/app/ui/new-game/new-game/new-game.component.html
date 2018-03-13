@@ -6,14 +6,19 @@
     <div class="row">
         <div class="col-12 col-sm-6 col-md-3 player-card-container" *ngFor="let player of players">
             <mat-card class="player-card">
-                <mat-card-header>
-                    <mat-card-title>{{ player.name }}</mat-card-title>
-                    <mat-card-subtitle>Level: {{ player.level }}</mat-card-subtitle>
-                </mat-card-header>
+                <div class="row">
+                    <div class="col-10">
+                        <mat-card-title>{{ player.name }}</mat-card-title>
+                        <mat-card-subtitle>Level: {{ player.level }}</mat-card-subtitle>
+                    </div>
+                    <div class="col-2">
+                        <i class="material-icons done" [@enterAnimation] *ngIf="player.team">done</i>
+                    </div>
+                </div>
                 <img mat-card-image src="{{ player.photo }}">
                 <mat-form-field>
                     <mat-select [(value)]="player.team" placeholder="Select a team">
-                        <mat-option value="none">None</mat-option>
+                        <mat-option value="">None</mat-option>
                         <mat-option value="team_A">Team A</mat-option>
                         <mat-option value="team_B">Team B</mat-option>
                     </mat-select>

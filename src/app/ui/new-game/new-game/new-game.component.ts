@@ -3,9 +3,29 @@ import {ApiService} from "../../../core/api.service";
 import {Player} from "../../../core/interfaces/player.interface";
 import {GameService} from "../../../core/game.service";
 import {Router} from "@angular/router";
+import {
+    trigger,
+    state,
+    style,
+    animate,
+    transition
+} from '@angular/animations';
 
 @Component({
     selector: 'foosball-new-game',
+    animations: [
+        trigger(
+            'enterAnimation', [
+                transition(':enter', [
+                    style({opacity:0}),
+                    animate(500, style({opacity:1}))
+                ]),
+                transition(':leave', [
+                    animate(500, style({opacity:0}))
+                ])
+            ]
+        )
+    ],
     templateUrl: './new-game.component.html',
     styleUrls: ['./new-game.component.scss']
 })
